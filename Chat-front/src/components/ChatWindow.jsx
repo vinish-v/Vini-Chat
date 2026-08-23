@@ -82,6 +82,12 @@ const ChatWindow = ({ selectedUser, messages, onSendMessage, token, setSelectedU
         <div className="chat-window">
             <div className="chat-header">
                 <div className="chat-header-user-info">
+                    <button className="mobile-back-btn" onClick={() => setSelectedUser(null)}>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                    </button>
                     {renderAvatar(selectedUser)}
                     <div className="chat-header-info">
                         <h3>{selectedUser.name}</h3>

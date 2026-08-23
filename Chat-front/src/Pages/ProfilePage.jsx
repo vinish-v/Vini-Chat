@@ -4,7 +4,8 @@ import { getAvatarColor } from "../utils/avatar";
 
 const ProfilePage = ({ 
     currentUser, 
-    onUpdateProfile
+    onUpdateProfile,
+    onBack
 }) => {
     const [name, setName] = useState("");
     const [photoBase64, setPhotoBase64] = useState("");
@@ -92,6 +93,13 @@ const ProfilePage = ({
     return (
         <div className="profile-page-container">
             <div className="profile-glass-card">
+                {/* Mobile Back Button */}
+                <button className="mobile-back-btn profile-back-btn" onClick={onBack} style={{ position: 'absolute', top: '1rem', left: '1rem' }}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </button>
                 {/* Profile Avatar Header */}
                 <div className="profile-header">
                     {renderProfileLargeAvatar()}

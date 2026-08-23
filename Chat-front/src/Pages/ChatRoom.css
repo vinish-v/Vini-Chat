@@ -640,3 +640,49 @@
   align-items: center;
   gap: 0.75rem;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    border-right: none;
+  }
+
+  /* When left pane is active, hide the right pane components */
+  .mobile-left-active .chat-window,
+  .mobile-left-active .no-chat-selected,
+  .mobile-left-active .profile-page-container {
+    display: none !important;
+  }
+
+  /* When right pane is active, hide the sidebar */
+  .mobile-right-active .sidebar {
+    display: none !important;
+  }
+
+  /* Add back button for mobile headers */
+  .mobile-back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+  }
+
+  .mobile-back-btn:hover {
+    background-color: #2f2f2f;
+  }
+}
+
+/* Hide mobile back buttons on desktop */
+@media (min-width: 769px) {
+  .mobile-back-btn {
+    display: none !important;
+  }
+}

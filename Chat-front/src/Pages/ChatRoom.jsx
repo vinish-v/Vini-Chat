@@ -181,8 +181,10 @@ const ChatRoom = ({ token, setToken }) => {
         setCurrentUser(res.data.user);
     };
 
+    const isRightPaneActive = selectedUser !== null || rightView === "profile";
+
     return (
-        <div className="chatroom-container">
+        <div className={`chatroom-container ${isRightPaneActive ? 'mobile-right-active' : 'mobile-left-active'}`}>
             <SideBar 
                 currentUser={currentUser}
                 users={users}
@@ -202,6 +204,7 @@ const ChatRoom = ({ token, setToken }) => {
                 <ProfilePage 
                     currentUser={currentUser}
                     onUpdateProfile={handleUpdateProfile}
+                    onBack={() => setRightView("chat")}
                 />
             ) : (
                 <ChatWindow 
