@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-color: #0d0d0d;
+  --card-bg: #171717;
+  --border-color: #2f2f2f;
+  --border-focus: #555555;
+  --text-primary: #ffffff;
+  --text-secondary: #b4b4b4;
+  --button-bg: #ffffff;
+  --button-text: #000000;
+  --error-bg: #2a1a1a;
+  --error-border: #4c1d1d;
+  --error-text: #fca5a5;
+}
+
+/* Base Body Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Heading Font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'EB Garamond', serif;
+}
+
+/* Initials Avatar Placeholders */
+.user-avatar-initials {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+.user-avatar-initials.small {
+  width: 32px;
+  height: 32px;
+  font-size: 0.8rem;
+}
+
+.user-avatar-initials.large {
+  width: 48px;
+  height: 48px;
+  font-size: 1.1rem;
+}
+
+.user-avatar-initials.profile-large {
+  width: 90px;
+  height: 90px;
+  font-size: 2rem;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Photo Upload Layout adjustments */
+.profile-photo-upload-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+.profile-upload-btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-upload-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.profile-remove-btn {
+  background: transparent;
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-remove-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+/* Logo Styling for Auth and Welcome screens */
+.auth-logo {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1.25rem auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+}
+
+.welcome-logo {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 1.25rem;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.5));
+}
