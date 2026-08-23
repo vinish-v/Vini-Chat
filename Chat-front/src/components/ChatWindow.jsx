@@ -53,8 +53,8 @@ const ChatWindow = ({ selectedUser, messages, onSendMessage, token, setSelectedU
             <div className="no-chat-selected">
                 <img src="/favicon.svg" alt="Vini Chat Logo" className="welcome-logo" />
                 <h2>Vini Chat</h2>
-                <p className="welcome-subtitle">Search username and chat to start messaging.</p>
-                
+                <p className="welcome-subtitle">Search for your friend's username and chat to start messaging.</p>
+
                 <form onSubmit={handleWelcomeSearchSubmit} className="welcome-search-form">
                     <div className="welcome-search-input-wrapper">
                         <input
